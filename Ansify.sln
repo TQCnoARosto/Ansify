@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ansify", "Ansify\Ansify.csproj", "{F05DF23D-6612-4765-BC79-1815D224A766}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{96D9B2BD-DCD4-4177-A406-52207E4F696D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F05DF23D-6612-4765-BC79-1815D224A766}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F05DF23D-6612-4765-BC79-1815D224A766}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F05DF23D-6612-4765-BC79-1815D224A766}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F05DF23D-6612-4765-BC79-1815D224A766}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96D9B2BD-DCD4-4177-A406-52207E4F696D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96D9B2BD-DCD4-4177-A406-52207E4F696D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96D9B2BD-DCD4-4177-A406-52207E4F696D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96D9B2BD-DCD4-4177-A406-52207E4F696D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BC0E3184-B8EB-4513-BA5A-4797B8B85D18}
+	EndGlobalSection
+EndGlobal
