@@ -1,14 +1,14 @@
 Simple library containing most (not all) escape commands.
 
 Some of the commands are used for:
-*Change cursor position.
-*Change cursor effect (enable/disable blinking or show/hide).
-*Change cursor shape.
-*Possibility to display text twice as wide or twice as tall than normal.
-*Possibility to scroll/modify the console buffer.
-*Possibility to swap between primary and temp buffer.
-*Change the font style (e.g. Italicized, Underlined, Blink, ...).
-*Change foreground/background text color.
+* Change cursor position.
+* Change cursor effect (enable/disable blinking or show/hide).
+* Change cursor shape.
+* Possibility to display text twice as wide or twice as tall than normal.
+* Possibility to scroll/modify the console buffer.
+* Possibility to swap between primary and temp buffer.
+* Change the font style (e.g. Italicized, Underlined, Blink, ...).
+* Change foreground/background text color.
 
 ## Examples
 1. Change aplication title.
