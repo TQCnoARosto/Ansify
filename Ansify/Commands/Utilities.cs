@@ -22,10 +22,6 @@ namespace Ansify.Commands
 
             switch (currentCommandType)
             {
-                case CommandType.FontStyle:
-                    builder.Append(';');
-                    builder.Append(commandText[startFrom..]);
-                    break;
                 default: builder.Append(commandText); break;
             }
         }

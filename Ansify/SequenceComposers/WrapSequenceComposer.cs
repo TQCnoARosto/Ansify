@@ -11,7 +11,7 @@ namespace Ansify.SequenceComposers
         Epilogue
     }
 
-    public class WrapSequenceComposer
+    public class WrapSequenceComposer : Composer
     {
         internal StringBuilder Preamble { get; init; } = new();
         internal StringBuilder Epilogue { get; init; } = new();
@@ -21,7 +21,7 @@ namespace Ansify.SequenceComposers
 
         public WrapSequenceComposerMode WrapSequenceComposerMode { get; set; } = WrapSequenceComposerMode.Preamble;
 
-        internal void Append(ReadOnlySpan<char> commandText, byte startFrom, CommandType type)
+        internal override void Append(ReadOnlySpan<char> commandText, byte startFrom, CommandType type)
         {
             CommandType lastCommandType;
 
@@ -40,7 +40,7 @@ namespace Ansify.SequenceComposers
             }
         }
 
-        public void Append(ReadOnlySpan<char> text)
+        public override void Append(ReadOnlySpan<char> text)
         {
             CommandType lastCommandType;
 

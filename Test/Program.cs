@@ -8,27 +8,28 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            SequenceComposer sequenceComposer = new();
+            WrapSequenceComposer wrapSequenceComposer = new();
 
-            Cursor.Hide(sequenceComposer);
-            Display.SetTitle(sequenceComposer, "CIAOOO1");
-            Cursor.Down(sequenceComposer);
-            Cursor.Down(sequenceComposer);
-            Cursor.Right(sequenceComposer);
-            Cursor.Right(sequenceComposer);
-            Cursor.Right(sequenceComposer);
-            Cursor.Show(sequenceComposer);
+            wrapSequenceComposer.WrapSequenceComposerMode = WrapSequenceComposerMode.Preamble;
+            Cursor.Home(wrapSequenceComposer);
+            wrapSequenceComposer.Append("[");
+            Font.SetForegroundColor(wrapSequenceComposer, 0, 255, 255);
 
-            Font.Style(sequenceComposer, StyleType.Italicized);
-            Font.SetForegroundColor(sequenceComposer, 255, 0, 0);
-            Font.SetBackgroundColor(sequenceComposer, 0, 0, 255);
+            wrapSequenceComposer.WrapSequenceComposerMode = WrapSequenceComposerMode.Epilogue;
+            Font.ResetForegroundColor(wrapSequenceComposer);
+            wrapSequenceComposer.Append("]");
 
-            Sequence sequence = sequenceComposer.Compose();
-            sequence.Use();
+            WrapSequence wrapSequence = wrapSequenceComposer.Compose();
+            Cursor.Hide();
 
-            Console.Write("Cacca0");
+            for (int i = 0; i <= 10; i++)
+            {
+                string progress = $"{new('=', i)}{new(' ', 10 - i)}";
+                wrapSequence.WrapText(progress);
 
-            Console.ReadKey();
+                int time = Random.Shared.Next(200, 1000);
+                Task.Delay(time).Wait();
+            }
         }
     }
 }
